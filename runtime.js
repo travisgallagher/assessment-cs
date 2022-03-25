@@ -45,15 +45,59 @@ const extraLargeArray = getSizedArray(100000);
 // How long does it take to double every number in a given 
 // array? 
 
+// // Try it with first function
+// perf.start();                     // Starts timer
+// doublerAppend(extraLargeArray);
+// let resultsAppend = perf.stop();  // Stops timer and save time results
+
+
+// // Try it with second function
+// perf.start();
+// doublerInsert(extraLargeArray);
+// let resultsInsert = perf.stop();
+
+// // Try it with first function
+// perf.start();                     // Starts timer
+// doublerAppend(tinyArray);
+// let resultsAppend = perf.stop();  // Stops timer and save time results
+
+
+// // Try it with second function
+// perf.start();
+// doublerInsert(tinyArray);
+// let resultsInsert = perf.stop();
+
+// // Try it with first function
+// perf.start();                     // Starts timer
+// doublerAppend(smallArray);
+// let resultsAppend = perf.stop();  // Stops timer and save time results
+
+
+// // Try it with second function
+// perf.start();
+// doublerInsert(smallArray);
+// let resultsInsert = perf.stop();
+
+// // Try it with first function
+// perf.start();                     // Starts timer
+// doublerAppend(mediumArray);
+// let resultsAppend = perf.stop();  // Stops timer and save time results
+
+
+// // Try it with second function
+// perf.start();
+// doublerInsert(mediumArray);
+// let resultsInsert = perf.stop();
+
 // Try it with first function
 perf.start();                     // Starts timer
-doublerAppend(extraLargeArray);
+doublerAppend(largeArray);
 let resultsAppend = perf.stop();  // Stops timer and save time results
 
 
 // Try it with second function
 perf.start();
-doublerInsert(extraLargeArray);
+doublerInsert(largeArray);
 let resultsInsert = perf.stop();
 
 

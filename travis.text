@@ -1,0 +1,25 @@
+Travis Gallagher
+ASSESSMENT-JS
+	doubleAppend()	doublerInsert()
+tinyArray[]	47.125 μs	21.458 μs
+smallArray[]	53.542 μs	26.917 μs
+mediumArray[]	118.5 μs	153.083 μs
+largeArray[]	494.958 μs	7.540291 ms
+extraLargeArray[]	2.399542 ms	772.075834 ms
+
+
+4. Write a paragraph that explains the pattern you see. 
+	
+	The most obvious pattern for both functions is that the bigger the array passed in, the longer it takes, which is to be expected. Where you can see the difference is when you start scaling up and keep adding to our array. With a tinyArray, our insert (unshift) is actually faster than our append (push). This is because unshift, will add to the front of the array and it will have to move each index over, in a tiny array you don’t have to move that many things so it works pretty well. As the size of the array gets bigger, the weakness of the unshift really starts to show, adding to its time. It looks to grow exponentially.  As for our push method, it stays fairly consistent in its time, and the time gradually increases as our array size increases. You can tell very clearly when it comes to the extraLargeArray. The push method accomplishes this in 2.33542ms where the unshift method completes the same array in 772.075834ms. A difference of almost 770ms! In summary, smaller arrays, unshift is fine to use. However, as your array increases its size, push is the much more efficient method. 
+
+5. Extra Credit: Why is unshift() so slow?
+	The unshift method is so much slower because when it adds to an array, instead of adding to the end, unshift will insert a new element to be at index 0. This means that the rest of the elements inside of that array must then add 1 to their index. This is why for a small array, it doesn’t seem to make that big of a difference. [1]  [0,1]. But when we get to a larger array, it will take each element and add to the index. You are potentially editing every element in the array vs push, where you just add to the end. 
+
+
+Citations: 
+Ahsan, A. (2019, September 4). Time complexities of common array operations in JavaScript. Medium. Retrieved March 25, 2022, from https://medium.com/@ashfaqueahsan61/time-complexities-of-common-array-operations-in-javascript-c11a6a65a168 
+
+
+
+
+
